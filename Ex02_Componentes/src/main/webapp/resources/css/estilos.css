@@ -1,0 +1,21 @@
+body{
+    background-color: #999999;
+    
+}
+
+.total{
+    width: 100%;
+}
+
+.titulo{
+    font-weight: bold;
+    text-align: center;
+    color: #999999;
+}
+
+.caixa{
+    background-color: #6666ff;
+    width: 400px;
+    margin: 0 auto;
+    
+}
