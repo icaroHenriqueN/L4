@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      >
+    <h:head>
+        <title>Ex04 - Energia Consumo</title>
+    </h:head>
+    <h:body style="background: #cccccc">
+        <h:form>
+            <p:card style="width: 90%; margin: 0 auto">
+                <f:facet name="title">
+                    Ex04 - Energia Consumo
+                </f:facet>
+                <div class="ui-g">
+                    <div class="ui-g-12 ui-lg-4">
+                        <p:outputLabel value="Equipamento"/>
+                        <p:inputText value="#{ct.cpNomeEq}" placeholder="Nome Do Equipamento" style="width: 100%"/>
+                    </div>
+                    <div class="ui-g-12 ui-lg-2">
+                        <p:outputLabel value="Potência(Watt)"/>
+                        <p:inputText value="#{ct.cpPotencia}" type="number"  style="width: 100%"/>
+                    </div>
+                    <div class="ui-g-12 ui-lg-2">
+                        <p:outputLabel value="Tempo"/>
+                        <p:inputText value="#{ct.cpTempo}" type="number" style="width: 100%"/>
+                    </div>
+                    <div class="ui-g-12 ui-lg-3">
+                        <p:outputLabel value="Unidade"/>
+                        <p:selectOneMenu  value="#{ct.cpUnidade}" style="width: 100%">
+                            <f:selectItem itemLabel="Selecione..." itemValue=""/>
+                            <f:selectItem itemLabel="Horas" itemValue="Hora"/>
+                            <f:selectItem itemLabel="Minutos" itemValue="Minuto"/>
+                        </p:selectOneMenu>
+                    </div>
+                    <div class="ui-g-12 ui-lg-1">
+                            <br/>
+                            <p:commandButton  value="Adicionar" styleClass="total ui-button-success"/>
+                    
+                    </div>
+                </div>
+                <p:dataTable value="" showGridlines="true" size="small">
+                    <p:column headerText="#">
+                              <p:outputLabel value="01"/>
+                    </p:column>
+                     <p:column headerText="Equipamento">
+                              <p:outputLabel value="XXXXXX"/>
+                    </p:column>
+                     <p:column headerText="Potência">
+                              <p:outputLabel value="XXXXXX"/>
+                    </p:column>
+                     <p:column headerText="Tempo">
+                              <p:outputLabel value="XXXXXX"/>
+                    </p:column>
+                     <p:column headerText="kW/h">
+                              <p:outputLabel value="XXXXXX"/>
+                    </p:column>
+                     <p:column headerText="Total">
+                              <p:outputLabel value="XXXXXX"/>
+                    </p:column>
+                     <p:column>
+                              <p:commandLink value="Alterar"/>
+                    </p:column>
+                    <p:column>
+                              <p:commandLink value="Excluir"/>
+                    </p:column>
+                </p:dataTable>
+                <div class="ui-g">
+                     <div class="ui-g-12 ui-lg-6">
+                        <p:outputLabel value="Total"/>
+                        <p:inputText value="#{ct.cpTotal}" disabled="true" style="width: 100%"/>
+                    </div>
+                    <div class="ui-g-12 ui-lg-6">
+                        <p:outputLabel value="Informe valor kW/h"/>
+                        <p:inputText value="#{ct.cpValor}" type="number" style="width: 100%"/>
+                    </div>
+                </div>
+            </p:card>
+        </h:form>
+    </h:body>
+</html>
